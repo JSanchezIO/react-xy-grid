@@ -1,15 +1,23 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable import/no-extraneous-dependencies */
 
-import Example from '../../src'
+import React from "react";
+import { render } from "react-dom";
+import { Cell, Grid, GridContainer } from "../../src";
 
-class Demo extends Component {
-  render() {
-    return <div>
+const Demo = () => {
+  return (
+    <div>
       <h1>react-xy-grid Demo</h1>
-      <Example/>
+      <GridContainer>
+        <Grid>
+          <Cell auto>
+            <span>test</span>
+          </Cell>
+        </Grid>
+      </GridContainer>
     </div>
-  }
-}
+  );
+};
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<Demo />, document.querySelector("#demo"));

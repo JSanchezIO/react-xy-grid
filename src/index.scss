@@ -1,0 +1,8 @@
+@import "~foundation-sites/scss/foundation.scss";
+
+@include foundation-flex-classes();
+@include foundation-xy-grid-classes();
+
+body {
+  overflow-x: hidden;
+}

@@ -1,12 +1,25 @@
 module.exports = {
-  type: 'react-component',
   npm: {
     esModules: true,
     umd: {
-      global: 'ReactXYGrid',
+      global: "ReactXYGrid",
       externals: {
-        react: 'React'
+        react: "React"
+      }
+    }
+  },
+  type: "react-component",
+  webpack: {
+    extra: {
+      resolve: {
+        extensions: [".js", ".jsx"]
+      }
+    },
+    extractCSS: false,
+    rules: {
+      babel: {
+        test: /\.jsx?/
       }
     }
   }
-}
+};

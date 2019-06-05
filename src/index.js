@@ -1,9 +1,6 @@
-import React, {Component} from 'react'
+import Cell from "./Cell/Cell";
+import Grid from "./Grid/Grid";
+import GridContainer from "./GridContainer/GridContainer";
+import "./index.css";
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export { Cell, Grid, GridContainer };
