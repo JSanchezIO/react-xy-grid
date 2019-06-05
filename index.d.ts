@@ -10,15 +10,15 @@ declare module "react-xy-grid" {
   type VerticalAlignment = "bottom" | "middle" | "stretch" | "top";
 
   type CellProps = {
-    auto: boolean;
+    auto?: boolean;
     children: React.ReactNode;
     className?: string;
-    component: () => string | string;
+    component?: () => string | string;
     lg?: "auto" | "shrink" | Columns;
     lgOffset?: Columns;
     md?: "auto" | "shrink" | Columns;
     mdOffset?: Columns;
-    shrink: boolean;
+    shrink?: boolean;
     sm?: "auto" | "shrink" | Columns;
     smOffset?: Columns;
     valign?: VerticalAlignment;
@@ -28,18 +28,18 @@ declare module "react-xy-grid" {
     align?: HorizontalAlignment;
     children: React.ReactNode;
     className?: string;
-    component: () => string | string;
-    gridX: boolean;
-    gridY: boolean;
+    component?: () => string | string;
+    gridX?: boolean;
+    gridY?: boolean;
     height?: number | string;
     lgCollapse?: GutterTypes;
     lgUp?: Columns;
-    marginX: boolean;
-    marginY: boolean;
+    marginX?: boolean;
+    marginY?: boolean;
     mdCollapse?: GutterTypes;
     mdUp?: Columns;
-    paddingX: boolean;
-    paddingY: boolean;
+    paddingX?: boolean;
+    paddingY?: boolean;
     smCollapse?: GutterTypes;
     smUp?: Columns;
     valign?: VerticalAlignment;
@@ -48,9 +48,9 @@ declare module "react-xy-grid" {
   type GridContainerProps = {
     children: React.ReactNode;
     className?: string;
-    component: () => string | string;
-    fluid: boolean;
-    full: boolean;
+    component?: () => string | string;
+    fluid?: boolean;
+    full?: boolean;
   };
 
   export class Cell extends React.PureComponent<CellProps> {}
