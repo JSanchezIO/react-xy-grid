@@ -50,14 +50,7 @@ const Grid = props => {
     style.height = typeof height === "number" ? `${height}px` : height;
   }
 
-  return React.createElement(
-    typeof component === "string" ? component : component(),
-    {
-      className: classes,
-      style
-    },
-    children
-  );
+  return React.createElement(component, { className: classes, style }, children);
 };
 
 Grid.defaultProps = {
@@ -84,7 +77,7 @@ Grid.propTypes = {
   align: PropTypes.oneOf(["center", "justify", "right", "spaced"]),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  component: PropTypes.string,
   gridX: PropTypes.bool,
   gridY: PropTypes.bool,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

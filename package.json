@@ -1,6 +1,6 @@
 {
   "name": "react-xy-grid",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "react-xy-grid React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -43,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
+    "expect": "^24.8.0",
     "foundation-sites": "^6.5.3",
     "husky": "^2.3.0",
     "nwb": "0.23.x",

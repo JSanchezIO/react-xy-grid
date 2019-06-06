@@ -14,13 +14,7 @@ const GridContainer = props => {
     className
   );
 
-  return React.createElement(
-    typeof component === "string" ? component : component(),
-    {
-      className: classes
-    },
-    children
-  );
+  return React.createElement(component, { className: classes }, children);
 };
 
 GridContainer.defaultProps = {
@@ -33,7 +27,7 @@ GridContainer.defaultProps = {
 GridContainer.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  component: PropTypes.string,
   fluid: PropTypes.bool,
   full: PropTypes.bool
 };

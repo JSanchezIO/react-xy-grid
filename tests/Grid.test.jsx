@@ -47,12 +47,6 @@ describe("Grid", () => {
     expect(wrapper.type()).toEqual("main");
   });
 
-  it("renders as a `span` tag via function", () => {
-    const wrapper = shallow(<Grid component={() => "span"}>Test</Grid>);
-
-    expect(wrapper.type()).toEqual("span");
-  });
-
   it("renders with the appropriate gridX class", () => {
     const wrapper = shallow(<Grid gridX>Test</Grid>);
 

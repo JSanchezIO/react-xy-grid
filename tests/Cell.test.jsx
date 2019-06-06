@@ -53,12 +53,6 @@ describe("Cell", () => {
     expect(wrapper.type()).toEqual("main");
   });
 
-  it("renders as a `span` tag via function", () => {
-    const wrapper = shallow(<Cell component={() => "span"}>Test</Cell>);
-
-    expect(wrapper.type()).toEqual("span");
-  });
-
   it("renders with the appropriate large class", () => {
     const wrapper = shallow(<Cell lg={2}>Test</Cell>);
 

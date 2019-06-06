@@ -34,13 +34,7 @@ const Cell = props => {
     className
   );
 
-  return React.createElement(
-    typeof component === "string" ? component : component(),
-    {
-      className: classes
-    },
-    children
-  );
+  return React.createElement(component, { className: classes }, children);
 };
 
 Cell.defaultProps = {
@@ -61,7 +55,7 @@ Cell.propTypes = {
   auto: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  component: PropTypes.string,
   lg: PropTypes.oneOf(["auto", "shrink", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
   lgOffset: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
   md: PropTypes.oneOf(["auto", "shrink", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),

@@ -47,12 +47,6 @@ describe("GridContainer", () => {
     expect(wrapper.type()).toEqual("main");
   });
 
-  it("renders as a `span` tag via function", () => {
-    const wrapper = shallow(<GridContainer component={() => "span"}>Test</GridContainer>);
-
-    expect(wrapper.type()).toEqual("span");
-  });
-
   it("renders with the appropriate fluid class", () => {
     const wrapper = shallow(<GridContainer fluid>Test</GridContainer>);
 

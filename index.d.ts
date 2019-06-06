@@ -13,7 +13,7 @@ declare module "react-xy-grid" {
     auto?: boolean;
     children: React.ReactNode;
     className?: string;
-    component?: () => string | string;
+    component?: string;
     lg?: "auto" | "shrink" | Columns;
     lgOffset?: Columns;
     md?: "auto" | "shrink" | Columns;
@@ -28,7 +28,7 @@ declare module "react-xy-grid" {
     align?: HorizontalAlignment;
     children: React.ReactNode;
     className?: string;
-    component?: () => string | string;
+    component?: string;
     gridX?: boolean;
     gridY?: boolean;
     height?: number | string;
@@ -48,7 +48,7 @@ declare module "react-xy-grid" {
   type GridContainerProps = {
     children: React.ReactNode;
     className?: string;
-    component?: () => string | string;
+    component?: string;
     fluid?: boolean;
     full?: boolean;
   };

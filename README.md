@@ -51,7 +51,7 @@ export default Home;
 | `auto`      | `boolean`                                                                              | `false`  | `false`       |
 | `children`  | `ReactNode`                                                                            | `true`   | `undefined`   |
 | `className` | `string`                                                                               | `false`  | `undefined`   |
-| `component` | `() => string` or `string`                                                             | `false`  | `"div"`       |
+| `component` | `string`                                                                               | `false`  | `"div"`       |
 | `lg`        | `"auto"`, `"shrink"`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, or `12` | `false`  | `undefined`   |
 | `lgOffset`  | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, or `12`                       | `false`  | `undefined`   |
 | `md`        | `"auto"`, `"shrink"`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, or `12` | `false`  | `undefined`   |
@@ -68,7 +68,7 @@ export default Home;
 | `align`      | `"center"`, `"justify"`, `"right"`, or `"spaced"`                | `false`  | `undefined`   |
 | `children`   | `ReactNode`                                                      | `true`   | `undefined`   |
 | `className`  | `string`                                                         | `false`  | `undefined`   |
-| `component`  | `() => string` or `string`                                       | `false`  | `"div"`       |
+| `component`  | `string`                                                         | `false`  | `"div"`       |
 | `gridX`      | `boolean`                                                        | `false`  | `false`       |
 | `gridY`      | `boolean`                                                        | `false`  | `false`       |
 | `height`     | `number` or `string`                                             | `false`  | `undefined`   |
@@ -86,13 +86,13 @@ export default Home;
 
 ## Grid Container
 
-| Name        | Type                       | Required | Default Value |
-| ----------- | -------------------------- | -------- | ------------- |
-| `children`  | `ReactNode`                | `true`   | `undefined`   |
-| `className` | `string`                   | `false`  | `undefined`   |
-| `component` | `() => string` or `string` | `false`  | `"div"`       |
-| `fluid`     | `boolean`                  | `false`  | `false`       |
-| `full`      | `boolean`                  | `false`  | `false`       |
+| Name        | Type        | Required | Default Value |
+| ----------- | ----------- | -------- | ------------- |
+| `children`  | `ReactNode` | `true`   | `undefined`   |
+| `className` | `string`    | `false`  | `undefined`   |
+| `component` | `string`    | `false`  | `"div"`       |
+| `fluid`     | `boolean`   | `false`  | `false`       |
+| `full`      | `boolean`   | `false`  | `false`       |
 
 ## Notes
 
@@ -102,7 +102,7 @@ If you import the components for use via the module namespace like so:
 import { Cell, Grid, GridContainer } from "react-xy-grid";
 ```
 
-Assuming, your build system supports CSS importing in script files, you will not have to manually import the CSS file as the module's index file import's a compiled CSS version of the Foundation styles.
+Using this syntax, you will not have to manually import the CSS file as the module's index file import's a compiled CSS version of the Foundation styles.
 
 > This assumes that your build system is configured to handle importing `.css` files in your scripts.
 
